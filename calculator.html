@@ -77,6 +77,32 @@
         <td><input type="button" value="AC" id="c" onclick="ac()" /></td>
       </tr>
     </table>
+   <script>
+  function display(value) {
+    document.getElementById('inp1').value += value;
+  }
+
+  function evalation() {
+    try {
+    
+      document.getElementById('inp1').value = eval(document.getElementById('inp1').value);
+    } catch (e) {
+     
+      document.getElementById('inp1').value = 'Error';
+    }
+  }
+
+  function deletee() {
    
+    let input = document.getElementById('inp1').value;
+
+    document.getElementById('inp1').value = input.slice(0, -1);
+  }
+
+  function ac() {
+    document.getElementById('inp1').value = '';
+  }
+</script>
+
   </body>
 </html>
